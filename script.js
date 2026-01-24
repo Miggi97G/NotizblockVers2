@@ -14,15 +14,15 @@ let notes = [];
 
 function renderNotes() {
     const contentDiv = document.getElementById('content');
+    contentDiv.innerHTML = '';
     for (let indexNote = 0; indexNote < notes.length; indexNote++) {
-        
         contentDiv.innerHTML += getNoteTemplate(indexNote);
     }
 }
 
 function getNoteTemplate(indexNote) {
     return `<div class="note">
-       <button onclick="deleteNote(${indexNote})">X</button> ${notes}
+       <button onclick="deleteNote(${indexNote})">X</button> ${notes[indexNote]}
     </div>`;
 }
 
@@ -32,6 +32,8 @@ function addNote() {
 
     notes.push(noteInput);
     renderNotes();
+
+    noteInputRef.value = '';
 }
 
 function deleteNote(indexNote) {
