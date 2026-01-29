@@ -1,15 +1,3 @@
-//Notizen global speichern
-//Notizen Hinzufügen
-//Notizen löschen
-
-//Erledigt Button
-//Erledigt Bereich
-//Notizen verschiebn (Drag and Drop)
-//Notizen bearbeiten
-//Notizen suchen
-//Notiz Datum (erstellt am)
-//Papierkorb, wird nach 30 tagen gelöscht
-
 let notes = [];
 let trashNotes = [];
 
@@ -27,18 +15,6 @@ function renderTrashNotes() {
     for (let indexTrashNote = 0; indexTrashNote < trashNotes.length; indexTrashNote++) {
         trashContentDiv.innerHTML += getTrashNoteTemplate(indexTrashNote);
     }
-}
-
-function getNoteTemplate(indexNote) {
-    return `<div class="note">
-       <button onclick="pushToTrash(${indexNote})">X</button> ${notes[indexNote]}
-    </div>`;
-}
-
-function getTrashNoteTemplate(indexTrashNote) {
-    return `<div class="trash_note">
-       <button onclick="deleteNote(${indexTrashNote})">X</button><p>${trashNotes[indexTrashNote]}</p>
-    </div>`;
 }
 
 function addNote() {
@@ -63,3 +39,14 @@ function deleteNote(indexNote) {
     trashNotes.splice(indexNote, 1);
     renderTrashNotes();
 }
+
+
+//Notizen global speichern
+
+//Erledigt Button
+//Erledigt Bereich
+//Notizen verschiebn (Drag and Drop)
+//Notizen bearbeiten
+//Notizen suchen
+//Notiz Datum (erstellt am)
+//Papierkorb, wird nach 30 tagen gelöscht
