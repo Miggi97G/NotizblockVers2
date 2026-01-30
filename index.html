@@ -11,20 +11,28 @@
 </head>
 
 <body onload="renderNotes()">
-    <h1>Check</h1>
-    <input id="note_input" type="text">
-    <button onclick="addNote()">Notiz hinzufügen</button>
+    <h1 class="header_title">Check</h1>
+    
 
-
-    <div id="content">
-
-    </div>
-    <div>
-        <h1>Trash</h1>
-        <div id="trashContent">
-
+    <div class="dashboard-container">
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <button class="add-btn"><span>+</span> New Note</button>
         </div>
-    </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active">All Notes</a>
+            <a href="#" class="nav-item">Favorites</a>
+            <a href="#" class="nav-item">Shared</a>
+            <a href="#" class="nav-item">Trash</a>
+        </nav>
+        <div class="sidebar-bottom">
+            <a href="#" class="nav-item">Settings</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        </main>
+</div>  
 
 </body>
 <script src="script.js"></script>
