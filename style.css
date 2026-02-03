@@ -1,28 +1,83 @@
+.header {
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input {
+background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Unterstützung für Safari */
+    
+    /* Rahmen & Form */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    
+    /* Text-Styling */
+    padding: 15px 25px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    width: 70%;
+    
+    /* Schwebender Effekt durch Schatten */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    
+    /* Sanfter Übergang */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-input:focus {
+    width: 350px; /* Weitet sich leicht aus */
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.3);
+    transform: translateY(+30px); /* Schwebt beim Tippen etwas höher */
+}
+
+
 .sidebar {
-    width: 250px;
+    min-width: 180px;
+    width: 40%;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
-    padding-right: 20px;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    
     height: 90vh;
-    margin-left: 5%;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 10px;
     margin: 10px;
 }
 
+.sidebar-top {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
 .sidebar-nav {
     flex-grow: 1; /* Schiebt die Settings nach unten */
-    margin-top: 30px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
 }
 
+.nav-content {
+    flex-grow: 1;
+    margin-top: 20px;
+}
+
 .nav-item {
     display: block;
-    padding: 12px 15px;
-    margin-bottom: 8px;
+    padding: 32px 15px;
+    margin-bottom: 32px;
     color: #444;
     text-decoration: none;
     border-radius: 12px;
