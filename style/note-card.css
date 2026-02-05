@@ -1,0 +1,72 @@
+:root {
+    --note-bg: #b9e9bc; /* Das helle Pastellgrün aus dem Bild */
+    --text-color: #333;
+    --icon-color: #777;
+    --footer-bg: rgba(0, 0, 0, 0.05); /* Dezente Abdunkelung für den Menü-Button */
+}
+
+.note-card {
+    background-color: var(--note-bg);
+    width: 280px;
+    height: 220px;
+    border-radius: 30px; /* Sehr weiche Ecken */
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Sanfter Schatten */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+/* Hover Effekt */
+.note-card:hover {
+    transform: translateY(-5px);
+}
+
+.note-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.note-header p {
+    margin: 5px 0 0 0;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heart-icon {
+    font-size: 1.2rem;
+    color: var(--icon-color);
+    opacity: 0.6;
+}
+
+.menu-button {
+    background-color: var(--footer-bg);
+    width: 60px;
+    height: 35px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Die zwei Striche im Menü-Button */
+.menu-button span {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: var(--icon-color);
+    border-radius: 2px;
+}

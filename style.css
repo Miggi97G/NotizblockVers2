@@ -90,6 +90,7 @@ background: rgba(255, 255, 255, 0.15);
     background: rgba(255, 255, 255, 0.2); /* Dezent gläsern */
     border: 1px solid rgba(255, 255, 255, 0.3);
     text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Hover-Effekt wie im Mockup */

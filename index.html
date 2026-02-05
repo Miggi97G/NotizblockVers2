@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./style/standard.css">
     <link rel="stylesheet" href="./style/dashboard.css">
+    <link rel="stylesheet" href="./style/note-card.css">
 </head>
 
 <body onload="renderNotes()">
@@ -36,11 +37,37 @@
                 <a href="#" class="nav-item">Trash</a>
             </nav>
         </aside>
-        <main class="main-content">
 
-            <divnote-content>
-                <h1>Test</h1>
-            </divnote-content>
+        <main class="main-content">
+            <div class="note-card">
+                <div class="note-header">
+                    <h1>Note1</h1>
+                    <p>Text</p>
+                </div>
+
+                <div class="note-footer">
+                    <span class="heart-icon">❤</span>
+                    <div class="menu-button">
+                        <span>Span1</span>
+                        <span>span2</span>
+                    </div>
+                </div>
+            </div>
+            <div class="note-card">
+                <div class="note-header">
+                    <h1>Note2</h1>
+                    <p>Text</p>
+                </div>
+
+                <div class="note-footer">
+                    <span class="heart-icon">❤</span>
+                    <div class="menu-button">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
         </main>
 
 
