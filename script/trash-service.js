@@ -15,3 +15,8 @@ function pushToTrash(indexNote) {
     renderNotes();
     renderTrashNotes();
 }
+
+function deleteNote(indexNote) {
+    trashNotes.splice(indexNote, 1);
+    renderTrashNotes();
+}

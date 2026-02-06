@@ -18,10 +18,7 @@ function addNote() {
     noteInputRef.value = '';
 }
 
-function deleteNote(indexNote) {
-    trashNotes.splice(indexNote, 1);
-    renderTrashNotes();
-}
+
 
 
 //Notizen global speichern

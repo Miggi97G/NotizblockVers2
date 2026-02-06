@@ -5,7 +5,7 @@ function myFunction() {
 
 // Modal schließen
 function closeModal() {
-    document.getElementById('noteModal').style.display = 'none';
+    document.getElementById('noteModal').style.display = '';
     document.getElementById('inputTitle').value = '';
     document.getElementById('inputText').value = '';
 }
@@ -25,6 +25,7 @@ function saveNote() {
     
     // Dein HTML-Struktur einfügen
     newNote.innerHTML = `
+    <button class="delete-btn" onclick="pushToTrash(${notes.length})">×</button>
         <div class="note-header">
             <h1>${title}</h1>
             <p>${text}</p>
@@ -37,22 +38,7 @@ function saveNote() {
         </div>
     `;
 
-    // Scroll-Logik an die neue Karte binden
-    //addScrollBehavior(newNote);
-
     notesList.appendChild(newNote);
     closeModal();
 }
-
-// Hilfsfunktion für den Scroll-Effekt
-//function addScrollBehavior(element) {
-   // let scrollTimeout;
-    //element.addEventListener('scroll', () => {
-       // element.classList.add('is-scrolling');
-        //clearTimeout(scrollTimeout);
-       // scrollTimeout = setTimeout(() => {
-           // element.classList.remove('is-scrolling');
-      //  }, 800);
-   // });
-//}
 
