@@ -1,3 +1,9 @@
+function init(index) {
+    localStorage.setItem('notes', "bruh");
+renderNotes();
+loadFromLocalStorage();
+}
+
 let notes = [];
 
 function renderNotes() {
@@ -11,6 +17,8 @@ function renderNotes() {
 function addNote() {
     let noteInputRef = document.getElementById('note_input');
     let noteInput = noteInputRef.value
+
+    saveToLocalStorage();
 
     notes.push(noteInput);
     renderNotes();
