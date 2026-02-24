@@ -1,7 +1,7 @@
 function init(index) {
-    localStorage.setItem('notes', "bruh");
-renderNotes();
-loadFromLocalStorage();
+    
+    renderNotes();
+    loadFromLocalStorage();
 }
 
 let notes = [];

@@ -16,6 +16,7 @@ function saveNote() {
     const text = document.getElementById('inputText').value;
 
     if (!title) return alert("Bitte alles ausfüllen!");
+    
 
     const notesList = document.getElementById('notesList');
 
@@ -38,7 +39,10 @@ function saveNote() {
         </div>
     `;
 
+    
+
     notesList.appendChild(newNote);
     closeModal();
+    
 }
 

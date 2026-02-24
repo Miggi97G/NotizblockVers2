@@ -6,17 +6,12 @@ const STORAGE_KEY_TRASH = 'my_notes_trash';
 
 
 function saveToLocalStorage() {
-    localStorage.setItem(STORAGE_KEY_ACTIVE, JSON.stringify(activeNotes));
-    localStorage.setItem(STORAGE_KEY_TRASH, JSON.stringify(trashNotes));
+    localStorage.setItem("notes", JSON.stringify(notes));
 }
 
 function loadFromLocalStorage() {
-    const savedActive = localStorage.getItem(STORAGE_KEY_ACTIVE);
-    const savedTrash = localStorage.getItem(STORAGE_KEY_TRASH);
-
-    activeNotes = savedActive ? JSON.parse(savedActive) : [];
-    trashNotes = savedTrash ? JSON.parse(savedTrash) : [];
-
+    const savedNotes = localStorage.getItem("notes");
+    notes = savedNotes ? JSON.parse(savedNotes) : [];
     render(); // Anzeige aktualisieren
 }
 
