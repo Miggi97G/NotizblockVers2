@@ -24,6 +24,7 @@ function addNote() {
     renderNotes();
 
     noteInputRef.value = '';
+    
 }
 
 
