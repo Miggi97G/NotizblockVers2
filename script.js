@@ -5,7 +5,7 @@ function init(index) {
 }
 
 let notes = [];
-
+//Test für git
 function renderNotes() {
     const contentDiv = document.getElementById('notesList');
     contentDiv.innerHTML = '';
